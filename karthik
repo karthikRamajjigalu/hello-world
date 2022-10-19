@@ -1,0 +1,28 @@
+pipeline{
+    agent any
+    stages{
+        stage('karthik'){
+        steps{
+            echo 'hello world'
+        }
+    }
+     stage('Santhosh'){
+        steps{
+            sh 'echo 60'
+        }
+     }
+     stage('Puneeth'){
+        steps{
+            echo 'hello from the last section'
+        }
+     }
+}
+post{
+    success{
+        echo "this is the success job send successfull mail to developer"
+    }
+    failure{
+        echo "build got failed and coll"
+    }
+    }
+}
